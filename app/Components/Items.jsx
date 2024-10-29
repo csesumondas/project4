@@ -38,7 +38,7 @@ export const data = [
 ];
 
 const Items = () => {
-  const { itemCount, setItemCount, item, setItem } = useItemContext();
+  const { item, setItem } = useItemContext();
 
   return (
     <div className="">
@@ -62,7 +62,6 @@ const Items = () => {
         </h1>
       </div>
       {/* Card content  */}
-
       <div className="flex justify-center items-center my-10 gap-3 relative">
         {data?.map((dataItem) => {
           const isAdded = item.some((cartItem) => cartItem.id === dataItem.id);

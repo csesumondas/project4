@@ -8,7 +8,7 @@ import { useItemContext } from "../ItemContext";
 
 const Navbar = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const { itemCount, setItemCount, item, setItem } = useItemContext();
+  const { item, setItem } = useItemContext();
 
   const handleQuantityChange = (index, newQuantity) => {
     if (newQuantity < 1) return;
