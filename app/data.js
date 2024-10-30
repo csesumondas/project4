@@ -1,0 +1,32 @@
+export const data = [
+  {
+    id: 1,
+    title: "Chicken",
+    price: 69,
+    quantity: 1,
+    status: "new",
+    image: "/img/chicken.jpg",
+    desc: `Chicken Fajitas served with rice and beans, tortillas, guacamole,
+               saisa and sour cream Chicken Fajits served wi....`,
+  },
+  {
+    id: 2,
+    title: "Fajitas",
+    image: "/img/fajitas.jpg",
+    status: "old",
+    quantity: 1,
+    price: 169,
+    desc: `Chicken Fajitas served with rice and beans, tortillas, guacamole,
+                 saisa and sour cream Chicken Fajits served wi....`,
+  },
+  {
+    id: 3,
+    title: "Chicken masala",
+    image: "/img/chickenmasala.jpg",
+    status: "new",
+    price: 269,
+    quantity: 1,
+    desc: `Chicken Fajitas served with rice and beans, tortillas, guacamole,
+                 saisa and sour cream Chicken Fajits served wi....`,
+  },
+];

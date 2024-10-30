@@ -3,39 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { useItemContext } from "../ItemContext";
-
-export const data = [
-  {
-    id: 1,
-    title: "Chicken",
-    price: 69,
-    quantity: 1,
-    status: "new",
-    image: "/img/chicken.jpg",
-    desc: `Chicken Fajitas served with rice and beans, tortillas, guacamole,
-             saisa and sour cream Chicken Fajits served wi....`,
-  },
-  {
-    id: 2,
-    title: "Fajitas",
-    image: "/img/fajitas.jpg",
-    status: "old",
-    quantity: 1,
-    price: 169,
-    desc: `Chicken Fajitas served with rice and beans, tortillas, guacamole,
-               saisa and sour cream Chicken Fajits served wi....`,
-  },
-  {
-    id: 3,
-    title: "Chicken masala",
-    image: "/img/chickenmasala.jpg",
-    status: "new",
-    price: 269,
-    quantity: 1,
-    desc: `Chicken Fajitas served with rice and beans, tortillas, guacamole,
-               saisa and sour cream Chicken Fajits served wi....`,
-  },
-];
+import { data } from "../data";
 
 const Items = () => {
   const { item, setItem } = useItemContext();
@@ -44,7 +12,7 @@ const Items = () => {
     <div className="">
       {/* Top Content/heading/Breadcrumb */}
       <div className="text-center mt-9">
-        <h1 className="text-3xl text-red-500 font-bold uppercase">
+        <h1 className="md:text-3xl text-2xl text-red-500 font-bold uppercase">
           chicken crisper&reg; combos
         </h1>
         <div
@@ -56,16 +24,15 @@ const Items = () => {
           <h2 className="text-gray-600">chicken crisper &reg; combos</h2>
         </div>
 
-        <h1 className="mt-5 text-lg text-gray-800">
+        <h1 className="mt-5 md:text-lg text-sm px-10 md:px-0 text-gray-800">
           Find everything from our Big Mouth Brugers&reg;, our always sizzling,
           Full-on Fajitas and our famous Chicken Crispers&reg;
         </h1>
       </div>
       {/* Card content  */}
-      <div className="flex justify-center items-center my-10 gap-3 relative">
+      <div className="flex md:flex-row flex-col justify-center items-center my-10 md:gap-3 gap-5 relative">
         {data?.map((dataItem) => {
           const isAdded = item.some((cartItem) => cartItem.id === dataItem.id);
-
           return (
             <div
               key={dataItem.id}
